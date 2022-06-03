@@ -19,13 +19,14 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     if (!imageUrl) {
       res.status(400).send("The query param 'image_url' is not set.")
     } else {
+      if (typeof(imageUrl) === "string")
       await filterImageFromURL(imageUrl).then((filteredImagePath) => {
         res.sendFile(filteredImagePath, () => {
           deleteLocalFiles([filteredImagePath])
-        }).catch((error) => {
+        })
+      }).catch((error: any) => {
           res.status(400).send(`The following error occured: ${error}`)
         })
-      })
     }
   })
 
