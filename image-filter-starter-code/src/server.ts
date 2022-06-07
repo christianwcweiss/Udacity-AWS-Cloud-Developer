@@ -30,16 +30,13 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     }
   })
 
-  // Root Endpoint
-  // Displays a simple message to the user
   app.get( "/", async (req: express.Request, res: express.Response) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
   
 
-  // Start the Server
   app.listen( port, () => {
-      console.log( `server running http://localhost:${ port }` );
+      console.log( `server running on http://localhost:${ port }` );
       console.log( `press CTRL+C to stop server` );
   } );
 })();
