@@ -50,4 +50,5 @@ Add your own domain name and have it point to the running services (try adding a
 > 
 
 My instance url:
-https://ec2-54-86-236-189.compute-1.amazonaws.com/
+develop.eba-xvepbwhb.us-east-1.elasticbeanstalk.com
+prod.eba-xvepbwhb.us-east-1.elasticbeanstalk.com
